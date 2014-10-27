@@ -1,0 +1,124 @@
+{
+  "execution_id": "f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6",
+  "name": "Leihs - Cucumber - Zurücknavigieren in der explorativen Suche - features/examples/explorative_suche.feature:39",
+  "state": "success",
+  "updated_at": "2014-10-14T13:06:01.257Z",
+  "priority": 5,
+  "id": "4c0d5916-2e2a-4caf-aa79-b6df54652614",
+  "error": "",
+  "_links": {
+    "cici:execution": {
+      "href": "/cider-ci/api/v1/execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6",
+      "title": "Execution"
+    },
+    "cici:root": {
+      "href": "/cider-ci/api/v1",
+      "title": "API-Root"
+    },
+    "cici:trials": {
+      "href": "/cider-ci/api/v1/task/4c0d5916-2e2a-4caf-aa79-b6df54652614/trials",
+      "title": "Trials"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v1/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v1/task/4c0d5916-2e2a-4caf-aa79-b6df54652614",
+      "title": "Task"
+    }
+  },
+  "created_at": "2014-10-14T12:55:33.159Z",
+  "data": {
+    "attachments": {
+      "cucumber_report": {
+        "content-type": "application/json",
+        "glob": "log/cucumber_report.json"
+      },
+      "logs": {
+        "content-type": "text/plain",
+        "glob": "log/*.log"
+      },
+      "screenshots": {
+        "content-type": "image/png",
+        "glob": "tmp/capybara/*.png"
+      }
+    },
+    "environment_variables": {
+      "RAILS_ENV": "test",
+      "TERM": "vt100"
+    },
+    "name": "Zurücknavigieren in der explorativen Suche - features/examples/explorative_suche.feature:39",
+    "ports": {
+      "xvnc_port": {
+        "inet_address": "localhost",
+        "max": 5999,
+        "min": 5900
+      }
+    },
+    "scripts": {
+      "bundle": {
+        "body": "\nbundle",
+        "interpreter": null,
+        "order": 1,
+        "timeout": 500,
+        "type": "prepare_executor"
+      },
+      "configer_db": {
+        "body": "\ncider-ci/bin/create_db_config_file.rb",
+        "interpreter": null,
+        "order": 2,
+        "timeout": 200,
+        "type": "main"
+      },
+      "cucumber": {
+        "body": "\nexport DISPLAY=\":$XVNC_PORT\"\nbundle exec cucumber -p default -f json -o log/cucumber_report.json features/examples/explorative_suche.feature:39 DEFAULT_BROWSER=firefox",
+        "interpreter": null,
+        "order": 5,
+        "timeout": 300,
+        "type": "main"
+      },
+      "drop_test_db": {
+        "body": "\nbundle exec rake db:drop",
+        "interpreter": null,
+        "order": 8,
+        "timeout": 200,
+        "type": "post_process"
+      },
+      "setup_database": {
+        "body": "\nbundle exec rake db:create",
+        "interpreter": null,
+        "order": 3,
+        "timeout": 200,
+        "type": "main"
+      },
+      "startx": {
+        "body": "\ntightvncserver \":$XVNC_PORT\"  -geometry 1024x768 -rfbport \"$XVNC_PORT\" -interface 127.0.0.1",
+        "interpreter": null,
+        "order": 4,
+        "timeout": 200,
+        "type": "main"
+      },
+      "stopx": {
+        "body": "\ntightvncserver -kill \":$XVNC_PORT\" -clean",
+        "interpreter": null,
+        "order": 9,
+        "timeout": 200,
+        "type": "post_process"
+      }
+    }
+  },
+  "traits": [
+    "firefox",
+    "linux",
+    "mysql",
+    "phantomjs",
+    "rbenv",
+    "ruby",
+    "tightvnc"
+  ]
+}
+

@@ -33,6 +33,25 @@ describe 'CiderClient' do
                 :status => 200,
                 :headers => { 'Content-type' => 'application/json' })
 
+    stub_request(:get,
+                 "#{base_url}/execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6/tasks").
+      with(:query => {:page => 2}).
+      to_return(:body => response_file('execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6/tasks/page_2.json'),
+                :status => 200,
+                :headers => { 'Content-type' => 'application/json' })
+
+
+    tasks = ['08abffb3-ee8e-403b-949a-0e95e6a78ac0', '4c0d5916-2e2a-4caf-aa79-b6df54652614',
+             '5892453f-8555-4c1b-894c-e1cb70891f1c', 'ce4bd431-e193-4333-a0d5-61332fe3ed5d']
+
+    tasks.each do |task|
+    stub_request(:get,
+                 "#{base_url}/task/#{task}").
+      to_return(:body => response_file("task/#{task}.json"),
+                :status => 200,
+                :headers => { 'Content-type' => 'application/json' })
+    end
+
     @cc = CiderClient.new
     @cc.username = 'user'
     @cc.password = 'pass'
@@ -41,9 +60,7 @@ describe 'CiderClient' do
 
   it 'should list some tasks' do
     @cc.execution_id = 'f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6'
-    # TODO: Many many mocks
-    #@cc.tasks
-
+    @cc.tasks
   end
 
 end

@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Metrics/LineLength:
+  Max: 100
+
+
+# The new syntax can go suck a camel, very confusing in so
+# many situations.
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
+  SupportedStyles:
+    - ruby19
+    - hash_rockets

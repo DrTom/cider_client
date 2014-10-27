@@ -5,3 +5,4 @@ gemspec
 gem 'rspec'
 gem 'webmock'
 gem 'rubocop', :require => false
+gem 'pry'

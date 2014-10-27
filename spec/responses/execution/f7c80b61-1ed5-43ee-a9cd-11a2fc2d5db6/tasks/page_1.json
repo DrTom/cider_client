@@ -1,0 +1,66 @@
+{
+  "_links": {
+    "cici:execution": {
+      "href": "/cider-ci/api/v1/execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6",
+      "title": "Execution"
+    },
+    "cici:task": [
+      {
+        "href": "/cider-ci/api/v1/task/5892453f-8555-4c1b-894c-e1cb70891f1c",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/08abffb3-ee8e-403b-949a-0e95e6a78ac0",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/a95bb6b5-a48f-40d3-9132-8112ad6d8bc7",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/e609148b-8de5-4a88-92a4-5d039f01bfd1",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/4e40df7a-99c2-42c4-bed0-ff8e461c05e1",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/6adeefca-9014-4b05-a645-efb71c7abfe7",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/c72d45e2-b8c8-408f-85cf-5d8119eb441c",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/3c9bbfdd-4f5a-4f08-bf61-d83d6b93e013",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/1190eebd-b0dc-4f7c-a25e-5e94ec280f92",
+        "title": "Task"
+      },
+      {
+        "href": "/cider-ci/api/v1/task/1fdcb168-cd4f-4dfe-a7e0-faa1a76c0dd6",
+        "title": "Task"
+      }
+    ],
+    "curies": [
+      {
+        "href": "/cider-ci/api/v1/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "next": {
+      "href": "/cider-ci/api/v1/execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6/tasks?page=2"
+    },
+    "previous": {
+      "href": "/cider-ci/api/v1/execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6/tasks?page=0"
+    },
+    "self": {
+      "href": "/cider-ci/api/v1/execution/f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6/tasks?page=1"
+    }
+  }
+}

@@ -23,7 +23,7 @@ class CiderClient
 
   # URL starting from the base URL root, with the passed path appended
   def url(path)
-    "#{base_url}/#{path}"
+    "#{base_url}#{path}"
   end
 
   def api_url(path)

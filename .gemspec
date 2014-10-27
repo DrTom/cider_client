@@ -9,5 +9,5 @@ Gem::Specification.new do |s|
   s.files       = ["lib/cider_client.rb"]
   s.add_runtime_dependency 'json', '~> 1.8'
   s.add_runtime_dependency 'rest-client', '~> 1.7'
-  #s.homepage    = 'https://rubygems.org/gems/example'
+  s.homepage    = 'https://github.com/psy-q/cider_client'
 end

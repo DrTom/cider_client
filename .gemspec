@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'cider_client'
-  s.version     = '0.0.1'
+  s.version     = '0.1.0'
   s.licenses    = ['MIT']
   s.summary     = "A client library for the Cider CI API"
   s.description = "Rudimentary library that wraps the Cider CI API in Ruby objects."

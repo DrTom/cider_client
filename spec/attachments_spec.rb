@@ -42,7 +42,8 @@ describe 'CiderClient' do
 
 
     tasks = ['08abffb3-ee8e-403b-949a-0e95e6a78ac0', '4c0d5916-2e2a-4caf-aa79-b6df54652614',
-             '5892453f-8555-4c1b-894c-e1cb70891f1c', 'ce4bd431-e193-4333-a0d5-61332fe3ed5d']
+             '5892453f-8555-4c1b-894c-e1cb70891f1c', 'ce4bd431-e193-4333-a0d5-61332fe3ed5d',
+             'f8e1d8f5-3bda-4229-a23c-e817bd7a0fa3', '08ea6e2b-0501-4246-bb39-44202c9ead97']
 
     tasks.each do |task|
     stub_request(:get,
@@ -58,9 +59,9 @@ describe 'CiderClient' do
     @cc.host = 'cider.example.org'
   end
 
-  it 'should list some tasks' do
+  it 'should list the tasks of an execution' do
     @cc.execution_id = 'f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6'
-    @cc.tasks
+    expect(@cc.tasks.count).to eq(6)
   end
 
 end

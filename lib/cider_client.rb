@@ -17,6 +17,9 @@ class CiderClient
     mode
   end
 
+  # Returns the base URL including usernames and passwords. Always uses usernames
+  # and passwords, because you can't do anything on Cider without basic auth anyhow.
+  # I used in all further url_* methods.
   def base_url
     "http://#{@username}:#{@password}@#{@host}"
   end
@@ -31,6 +34,7 @@ class CiderClient
   end
 
   # URL starting from the execution, with the passed path appended
+  # TODO: Stick these *_url methods into something like url_for(:execution, 'foo')
   def execution_url(path)
     api_url("execution/#{@execution_id}/#{path}")
   end

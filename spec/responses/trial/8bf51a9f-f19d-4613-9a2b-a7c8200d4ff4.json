@@ -1,0 +1,42 @@
+{
+  "finished_at": "2014-10-14T13:06:01.074Z",
+  "started_at": "2014-10-14T13:05:23.061Z",
+  "scripts": [],
+  "executor_id": "be343e2b-7399-4bc1-b09c-b08bb032ec2c",
+  "state": "success",
+  "updated_at": "2014-10-24T12:56:39.485Z",
+  "id": "8bf51a9f-f19d-4613-9a2b-a7c8200d4ff4",
+  "task_id": "4c0d5916-2e2a-4caf-aa79-b6df54652614",
+  "error": null,
+  "_links": {
+    "cici:root": {
+      "href": "/cider-ci/api/v1",
+      "title": "API-Root"
+    },
+    "cici:task": {
+      "href": "/cider-ci/api/v1/task/4c0d5916-2e2a-4caf-aa79-b6df54652614",
+      "title": "Task"
+    },
+    "cici:trial-attachments": {
+      "href": "/cider-ci/api/v1/trial/8bf51a9f-f19d-4613-9a2b-a7c8200d4ff4/trial-attachments",
+      "title": "Trial-Attachments"
+    },
+    "cici:trials": {
+      "href": "/cider-ci/api/v1/task/4c0d5916-2e2a-4caf-aa79-b6df54652614/trials",
+      "title": "Trials"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v1/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v1/trial/8bf51a9f-f19d-4613-9a2b-a7c8200d4ff4",
+      "title": "Trial"
+    }
+  },
+  "created_at": "2014-10-14T12:55:33.384Z"
+}
+

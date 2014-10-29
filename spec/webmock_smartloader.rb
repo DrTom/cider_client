@@ -6,28 +6,26 @@ ROOT_URL = 'user:pass@cider.example.org'
 
 def self_href_from_file(path)
   parsed = JSON.parse(File.read(path))
-  if parsed['_links']
-    parsed['_links']['self']['href']
-  else
-    parsed[0]['_links']['self']['href']
-  end
+  parsed['_links']['self']['href']
 end
 
 def mock_index(path)
   self_url = "#{ROOT_URL}#{self_href_from_file(path)}"
+  puts "Stubbing: #{self_url} with #{path}"
   stub_request(:get,
                self_url).
-   to_return(:body => path,
-            :status => 200,
-            :headers => { 'Content-type' => 'application/json' })
+    to_return(:body => File.read(path),
+              :status => 200,
+              :headers => { 'Content-type' => 'application/json' })
 end
 
 def mock_page(path, page_number)
   self_url = "#{ROOT_URL}#{self_href_from_file(path)}"
+  puts "Stubbing: #{self_url}, page #{page_number} with #{path}"
   stub_request(:get,
                self_url).
    with(:query => {:page => page_number}).
-   to_return(:body => path,
+   to_return(:body => File.read(path),
             :status => 200,
             :headers => { 'Content-type' => 'application/json' })
 end

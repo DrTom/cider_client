@@ -30,7 +30,7 @@ class CiderClient
   end
 
   def api_url(path)
-    url("/cider-ci/api/v1/#{path}")
+    url("/cider-ci/api/v2/#{path}")
   end
 
   # URL starting from the execution, with the passed path appended

@@ -1,0 +1,40 @@
+{
+  "tree_id": "bf4aef35aa3802948cd26e54b745789fd2ecc642",
+  "expanded_specification_id": "3b357ddc-0add-522b-8a0f-a4750a7674e7",
+  "name": "Test",
+  "state": "success",
+  "updated_at": "2014-10-29T10:40:04.523Z",
+  "priority": 5,
+  "id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+  "_links": {
+    "cici:execution-stats": {
+      "href": "/cider-ci/api/v2/execution/2e9f69c5-e19c-4d9d-8793-714edbc7edb5/stats",
+      "title": "Execution-Stats"
+    },
+    "cici:root": {
+      "href": "/cider-ci/api/v2",
+      "title": "API-Root"
+    },
+    "cici:tasks": {
+      "href": "/cider-ci/api/v2/execution/2e9f69c5-e19c-4d9d-8793-714edbc7edb5/tasks",
+      "title": "Tasks"
+    },
+    "cici:tree-attachments": {
+      "href": "/cider-ci/api/v2/execution/2e9f69c5-e19c-4d9d-8793-714edbc7edb5/tree-attachments",
+      "title": "Tree-Attachments"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v2/execution/2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+      "title": "Execution"
+    }
+  },
+  "created_at": "2014-10-29T10:34:45.303Z"
+}
+

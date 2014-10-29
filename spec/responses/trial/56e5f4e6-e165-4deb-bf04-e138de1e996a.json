@@ -1,0 +1,62 @@
+{
+  "finished_at": "2014-10-29T10:34:50.742Z",
+  "started_at": "2014-10-29T10:34:49.354Z",
+  "scripts": {
+    "main": {
+      "body": "cider-ci_v2/bin/check_cucumber-features_tested.rb",
+      "trial_id": "56e5f4e6-e165-4deb-bf04-e138de1e996a",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/56e5f4e6-e165-4deb-bf04-e138de1e996a",
+      "stderr": null,
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:34:50.503Z",
+      "name": "main",
+      "environment_variables": {
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66",
+        "cider_ci_trial_id": "56e5f4e6-e165-4deb-bf04-e138de1e996a"
+      },
+      "state": "success",
+      "stdout": "existing_files and the tested_files are equivalent\n",
+      "finished_at": "2014-10-29T10:34:50.742Z",
+      "ports": {},
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    }
+  },
+  "executor_id": "11d1200b-6e9a-46aa-a7ec-2947e8c61a55",
+  "state": "success",
+  "updated_at": "2014-10-29T10:34:50.754Z",
+  "id": "56e5f4e6-e165-4deb-bf04-e138de1e996a",
+  "task_id": "7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66",
+  "error": null,
+  "_links": {
+    "cici:root": {
+      "href": "/cider-ci/api/v2",
+      "title": "API-Root"
+    },
+    "cici:task": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66",
+      "title": "Task"
+    },
+    "cici:trial-attachments": {
+      "href": "/cider-ci/api/v2/trial/56e5f4e6-e165-4deb-bf04-e138de1e996a/trial-attachments",
+      "title": "Trial-Attachments"
+    },
+    "cici:trials": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66/trials",
+      "title": "Trials"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v2/trial/56e5f4e6-e165-4deb-bf04-e138de1e996a",
+      "title": "Trial"
+    }
+  },
+  "created_at": "2014-10-29T10:34:47.976Z"
+}

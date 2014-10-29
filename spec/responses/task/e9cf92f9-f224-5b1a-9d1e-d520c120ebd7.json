@@ -1,0 +1,49 @@
+{
+  "task_spec_id": "468fc3e1-1613-5a37-a30a-effbfaa9f8d1",
+  "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+  "name": "Madek Tests » Rails » Integration » Cucumber Features » admin_settings",
+  "state": "success",
+  "updated_at": "2014-10-29T10:36:38.135Z",
+  "priority": 5,
+  "id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+  "error": "",
+  "_links": {
+    "cici:execution": {
+      "href": "/cider-ci/api/v2/execution/2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+      "title": "Execution"
+    },
+    "cici:root": {
+      "href": "/cider-ci/api/v2",
+      "title": "API-Root"
+    },
+    "cici:trials": {
+      "href": "/cider-ci/api/v2/task/e9cf92f9-f224-5b1a-9d1e-d520c120ebd7/trials",
+      "title": "Trials"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v2/task/e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+      "title": "Task"
+    }
+  },
+  "created_at": "2014-10-29T10:34:47.405Z",
+  "traits": [
+    "libimage-exiftool-perl",
+    "pg93",
+    "nodejs",
+    "tightvnc",
+    "firefox",
+    "phantomjs",
+    "linux",
+    "imagemagick",
+    "ruby",
+    "rbenv"
+  ]
+}
+

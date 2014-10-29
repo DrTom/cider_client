@@ -1,0 +1,39 @@
+{
+  "task_spec_id": "38e521d8-1f48-5f61-8e30-250a20303253",
+  "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+  "name": "Madek Tests » Completeness » Check all cucumber-features are tested",
+  "state": "success",
+  "updated_at": "2014-10-29T10:34:50.827Z",
+  "priority": 5,
+  "id": "7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66",
+  "error": "",
+  "_links": {
+    "cici:execution": {
+      "href": "/cider-ci/api/v2/execution/2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+      "title": "Execution"
+    },
+    "cici:root": {
+      "href": "/cider-ci/api/v2",
+      "title": "API-Root"
+    },
+    "cici:trials": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66/trials",
+      "title": "Trials"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66",
+      "title": "Task"
+    }
+  },
+  "created_at": "2014-10-29T10:34:45.787Z",
+  "traits": [
+    "linux"
+  ]
+}

@@ -12,15 +12,14 @@ describe 'CiderClient' do
     @cc.username = 'user'
     @cc.password = 'pass'
     @cc.host = 'cider.example.org'
+    @cc.execution_id = '2e9f69c5-e19c-4d9d-8793-714edbc7edb5'
   end
 
   it 'should list the tasks of an execution' do
-    @cc.execution_id = 'f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6'
-    expect(@cc.tasks.count).to eq(6)
+    expect(@cc.tasks.count).to eq(3)
   end
 
   it 'should list the correct number of trial_attachment_hrefs' do
-    @cc.execution_id = 'f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6'
     expect(@cc.trial_attachment_hrefs.count).to eq(6)
   end
 

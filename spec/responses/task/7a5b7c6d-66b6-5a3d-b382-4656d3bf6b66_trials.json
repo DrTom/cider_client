@@ -1,0 +1,27 @@
+{
+  "_links": {
+    "cici:task": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66",
+      "title": "Task"
+    },
+    "cici:trial": [
+      {
+        "href": "/cider-ci/api/v2/trial/56e5f4e6-e165-4deb-bf04-e138de1e996a",
+        "title": "Trial"
+      }
+    ],
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "next": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66/trials?page=1"
+    },
+    "self": {
+      "href": "/cider-ci/api/v2/task/7a5b7c6d-66b6-5a3d-b382-4656d3bf6b66/trials?"
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "finished_at": "2014-10-29T10:36:38.044Z",
+  "started_at": "2014-10-29T10:35:42.352Z",
+  "scripts": {
+    "bundle": {
+      "body": "bundle",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": null,
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:35:43.581Z",
+      "name": "bundle",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "timeout": 500,
+      "order": 1,
+      "state": "success",
+      "stdout": "Using rake 10.3.2\nUsing i18n 0.6.11\nUsing json 1.8.1\nUsing minitest 5.4.2\nUsing thread_safe 0.3.4\nUsing tzinfo 1.2.2\nUsing activesupport 4.1.5\nUsing builder 3.2.2\nUsing erubis 2.7.0\nUsing actionview 4.1.5\nUsing rack 1.5.2\nUsing rack-test 0.6.2\nUsing actionpack 4.1.5\nUsing mime-types 1.25.1\nUsing polyglot 0.3.5\nUsing treetop 1.4.15\nUsing mail 2.5.4\nUsing actionmailer 4.1.5\nUsing activemodel 4.1.5\nUsing arel 5.0.1.20140414130214\nUsing activerecord 4.1.5\nUsing chunky_png 1.3.1\nUsing fssm 0.2.10\nUsing sass 3.2.12\nUsing compass 0.12.2\nUsing animation 0.1.alpha.3\nUsing bcrypt 3.1.7\nUsing bcrypt-ruby 3.1.5\nUsing coderay 1.1.0\nUsing better_errors 2.0.0\nUsing debug_inspector 0.0.2\nUsing binding_of_caller 0.7.2\nUsing bootstrap-sass 3.2.0.2\nUsing callsite 0.0.11\nUsing highline 1.6.21\nUsing net-ssh 2.9.1\nUsing net-scp 1.2.1\nUsing net-sftp 2.1.2\nUsing net-ssh-gateway 1.2.0\nUsing capistrano 2.15.5\nUsing mini_portile 0.6.0\nUsing nokogiri 1.6.3.1\nUsing ffi 1.9.5\nUsing childprocess 0.5.5\nUsing multi_json 1.10.1\nUsing rubyzip 1.1.6\nUsing websocket 1.2.1\nUsing selenium-webdriver 2.43.0\nUsing xpath 0.1.4\nUsing capybara 1.1.2\nUsing coffee-script-source 1.8.0\nUsing execjs 2.2.1\nUsing coffee-script 2.3.0\nUsing thor 0.19.1\nUsing railties 4.1.5\nUsing coffee-rails 4.0.1\nUsing compass-rails 2.0.0\nUsing diff-lcs 1.2.5\nUsing gherkin 2.12.2\nUsing multi_test 0.1.1\nUsing cucumber 1.3.17\nUsing bundler 1.6.2\nUsing hike 1.2.3\nUsing tilt 1.4.1\nUsing sprockets 2.11.0\nUsing sprockets-rails 2.1.4\nUsing rails 4.1.5\nUsing cucumber-rails 1.4.1\nUsing daemons 1.1.9\nUsing dalli 2.7.2\nUsing docile 1.1.5\nUsing eventmachine 1.0.3\nUsing factory_girl 4.4.0\nUsing factory_girl_rails 4.4.1\nUsing faker 1.4.3\nUsing fast_gettext 0.9.0\nUsing faye-websocket 0.4.7\nUsing font-awesome-sass 4.2.0\nUsing foreigner 1.6.1\nUsing gettext_i18n_rails 1.1.0\nUsing git 1.2.8\nUsing haml 4.0.5\nUsing haml-rails 0.5.3\nUsing haml_assets 0.2.2\nUsing haml_coffee_assets 1.16.0\nUsing http_parser.rb 0.5.3\nUsing multi_xml 0.5.5\nUsing httparty 0.13.1\nUsing jquery-rails 3.1.2\nUsing jquery-tmpl-rails 1.1.0\nUsing jquery-ui-rails 5.0.0\nUsing kaminari 0.16.1\nUsing kramdown 1.4.2\nUsing libv8 3.16.14.7\nUsing madek_zhdk_integration 0.0.1 from https://github.com/zhdk/madek-zhdk-integration.git (at 0de0956)\nUsing memcache-client 1.8.5\nUsing rack-contrib 1.1.0\nUsing meta_request 0.3.4\nUsing method_source 0.8.2\nUsing net-ldap 0.8.0\nUsing netrc 0.7.7\nUsing newrelic_rpm 3.9.5.251\nUsing pg 0.17.1\nUsing poltergeist 1.0.3\nUsing slop 3.6.0\nUsing pry 0.10.1\nUsing pry-nav 0.2.4\nUsing quiet_assets 1.0.3\nUsing rails_autolink 1.1.6\nUsing rails_config 0.4.2\nUsing ref 1.0.5\nUsing uber 0.0.8\nUsing representable 1.8.5\nUsing rest-client 1.7.2\nUsing roar 0.12.9\nUsing test_xml 0.1.6\nUsing roar-rails 0.1.6\nUsing rspec-core 2.14.8\nUsing rspec-expectations 2.14.5\nUsing rspec-mocks 2.14.6\nUsing rspec 2.14.1\nUsing rspec-rails 2.14.2\nUsing rvm-capistrano 1.5.4\nUsing sass-rails 4.0.3\nUsing simplecov-html 0.8.0\nUsing simplecov 0.9.1\nUsing textacular 3.2.0 from https://github.com/DrTom/textacular.git (at master)\nUsing therubyracer 0.12.1\nUsing thin 1.6.3\nUsing trollop 2.0\nUsing uglifier 2.5.3\nUsing uuidtools 2.1.5\nUsing zencoder 2.5.1\nUsing zencoder-fetcher 0.2.8\nYour bundle is complete!\nUse `bundle show [gemname]` to see where a bundled gem is installed.\n",
+      "finished_at": "2014-10-29T10:35:44.926Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "configer_db": {
+      "body": "cider-ci_v2/bin/create_db_config_file.rb",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": null,
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:35:44.926Z",
+      "name": "configer_db",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "order": 2,
+      "state": "success",
+      "stdout": null,
+      "finished_at": "2014-10-29T10:35:45.160Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "cucumber": {
+      "body": "DISPLAY=\":$XVNC_PORT\" bundle exec cucumber --strict \"features/admin_settings.feature\"",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": "DEPRECATION WARNING: Implicit join references were removed with Rails 4.1.Make sure to remove this configuration because it does nothing. (called from block in <class:Railtie> at /home/ciderex/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/bundler/gems/textacular-ab1f5677539b/lib/textacular/rails.rb:7)\n",
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:36:00.878Z",
+      "name": "cucumber",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "timeout": 300,
+      "order": 6,
+      "state": "success",
+      "stdout": "required simplecov\nCUCUMBER_RANDOM_SEED=829110\nUsing the default profile...\nFeature: Managing Users and Logins\n  \n  As a MAdeK admin\n\n  Background:                      # features/admin_settings.feature:5\n    Given I am signed-in as \"Adam\" # features/step_definitions/i_a_steps.rb:222\n\n  Scenario: Setting a featured set                                                                                 # features/admin_settings.feature:8\n    When I visit \"/app_admin/settings\"                                                                             # features/step_definitions/i_v_steps.rb:10\n    Then I set the input with the name \"app_settings[featured_set_id]\" to \"434c473e-c685-4ea8-83f1-ceebff16c843\"   # features/step_definitions/i_s_steps.rb:54\n    And I submit the form with id \"special-sets-form\"                                                              # features/step_definitions/i_s_steps.rb:79\n    Then I can see a success message                                                                               # features/step_definitions/i_c_steps.rb:165\n    And There is the input with name \"app_settings[featured_set_id]\" set to \"434c473e-c685-4ea8-83f1-ceebff16c843\" # features/step_definitions/there_is_steps.rb:138\n\n  Scenario: Setting a teater set                                                                                 # features/admin_settings.feature:15\n    When I visit \"/app_admin/settings\"                                                                           # features/step_definitions/i_v_steps.rb:10\n    Then I set the input with the name \"app_settings[teaser_set_id]\" to \"e499b452-ed3a-483a-9102-ff6fdb6fb6a5\"   # features/step_definitions/i_s_steps.rb:54\n    And I submit the form with id \"special-sets-form\"                                                            # features/step_definitions/i_s_steps.rb:79\n    Then I can see a success message                                                                             # features/step_definitions/i_c_steps.rb:165\n    And There is the input with name \"app_settings[teaser_set_id]\" set to \"e499b452-ed3a-483a-9102-ff6fdb6fb6a5\" # features/step_definitions/there_is_steps.rb:138\n\n  Scenario: Setting a catalog set                                                                                 # features/admin_settings.feature:22\n    When I visit \"/app_admin/settings\"                                                                            # features/step_definitions/i_v_steps.rb:10\n    Then I set the input with the name \"app_settings[catalog_set_id]\" to \"d2582be1-9180-46f1-93c6-4798de15f615\"   # features/step_definitions/i_s_steps.rb:54\n    And I submit the form with id \"special-sets-form\"                                                             # features/step_definitions/i_s_steps.rb:79\n    Then I can see a success message                                                                              # features/step_definitions/i_c_steps.rb:165\n    And There is the input with name \"app_settings[catalog_set_id]\" set to \"d2582be1-9180-46f1-93c6-4798de15f615\" # features/step_definitions/there_is_steps.rb:138\n\n  Scenario: Setting a special set with empty value                                                                  # features/admin_settings.feature:29\n    When I visit \"/app_admin/settings\"                                                                              # features/step_definitions/i_v_steps.rb:10\n    Then There is the input with name \"app_settings[featured_set_id]\" set to \"d2582be1-9180-46f1-93c6-4798de15f615\" # features/step_definitions/there_is_steps.rb:138\n    When I set the input with the name \"app_settings[featured_set_id]\" to \"\"                                        # features/step_definitions/i_s_steps.rb:54\n    And I submit the form with id \"special-sets-form\"                                                               # features/step_definitions/i_s_steps.rb:79\n    Then I can see an error message                                                                                 # features/step_definitions/i_c_steps.rb:141\n    And There is the input with name \"app_settings[featured_set_id]\" set to \"d2582be1-9180-46f1-93c6-4798de15f615\"  # features/step_definitions/there_is_steps.rb:138\n\n  Scenario: Setting a special set with the same id                                                                  # features/admin_settings.feature:37\n    When I visit \"/app_admin/settings\"                                                                              # features/step_definitions/i_v_steps.rb:10\n    Then There is the input with name \"app_settings[featured_set_id]\" set to \"d2582be1-9180-46f1-93c6-4798de15f615\" # features/step_definitions/there_is_steps.rb:138\n    And I submit the form with id \"special-sets-form\"                                                               # features/step_definitions/i_s_steps.rb:79\n    Then I can see a notice with message \"The special sets have not been updated.\"                                  # features/step_definitions/i_c_steps.rb:120\n    And There is the input with name \"app_settings[featured_set_id]\" set to \"d2582be1-9180-46f1-93c6-4798de15f615\"  # features/step_definitions/there_is_steps.rb:138\n\n5 scenarios (5 passed)\n31 steps (31 passed)\n0m26.709s\nCUCUMBER_RANDOM_SEED=829110\nCoverage report generated for Cucumber Features, RSpec to /tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025/coverage. 1186 / 2311 LOC (51.32%) covered.\n",
+      "finished_at": "2014-10-29T10:36:33.450Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "drop_test_db": {
+      "body": "bundle exec rake db:drop",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": null,
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:36:33.450Z",
+      "name": "drop_test_db",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "order": 8,
+      "type": "post_process",
+      "state": "success",
+      "stdout": null,
+      "finished_at": "2014-10-29T10:36:37.825Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "setup_database": {
+      "body": "bundle exec rake db:reset",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": "DEPRECATION WARNING: Implicit join references were removed with Rails 4.1.Make sure to remove this configuration because it does nothing. (called from block in tsort_each at /home/ciderex/.rbenv/versions/2.1.1/lib/ruby/2.1.0/tsort.rb:226)\n",
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:35:45.160Z",
+      "name": "setup_database",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "order": 3,
+      "state": "success",
+      "stdout": "required simplecov\nCoverage report generated for RSpec to /tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025/coverage. 343 / 623 LOC (55.06%) covered.\n",
+      "finished_at": "2014-10-29T10:35:53.617Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "setup_madek": {
+      "body": "bundle exec rake madek:setup:dirs",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": "DEPRECATION WARNING: Implicit join references were removed with Rails 4.1.Make sure to remove this configuration because it does nothing. (called from block in tsort_each at /home/ciderex/.rbenv/versions/2.1.1/lib/ruby/2.1.0/tsort.rb:226)\n",
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:35:53.617Z",
+      "name": "setup_madek",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "order": 4,
+      "state": "success",
+      "stdout": "required simplecov\nCoverage report generated for RSpec to /tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025/coverage. 349 / 629 LOC (55.48%) covered.\n",
+      "finished_at": "2014-10-29T10:35:59.764Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "startx": {
+      "body": "tightvncserver \":$XVNC_PORT\"  -geometry 1024x768 -rfbport \"$XVNC_PORT\"  -interface '127.0.0.1'",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": "\nNew 'X' desktop is cislave5:5922\n\nStarting applications specified in /home/ciderex/.vnc/xstartup\nLog file is /home/ciderex/.vnc/cislave5:5922.log\n\n",
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:35:59.764Z",
+      "name": "startx",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "order": 5,
+      "state": "success",
+      "stdout": null,
+      "finished_at": "2014-10-29T10:36:00.878Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    },
+    "stopx": {
+      "body": "tightvncserver -kill \":$XVNC_PORT\" -clean",
+      "trial_id": "14d441c4-f709-4a32-890e-3383e9c13025",
+      "working_dir": "/tmp/cider-ci_executor_working-dir/14d441c4-f709-4a32-890e-3383e9c13025",
+      "stderr": "Killing Xtightvnc process ID 22395\n",
+      "exit_status": 0,
+      "error": null,
+      "started_at": "2014-10-29T10:36:37.825Z",
+      "name": "stopx",
+      "environment_variables": {
+        "RAILS_ENV": "test",
+        "cider_ci_execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5",
+        "cider_ci_task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+        "cider_ci_trial_id": "14d441c4-f709-4a32-890e-3383e9c13025"
+      },
+      "order": 9,
+      "type": "post_process",
+      "state": "success",
+      "stdout": null,
+      "finished_at": "2014-10-29T10:36:37.991Z",
+      "ports": {
+        "xvnc_port": 5922
+      },
+      "execution_id": "2e9f69c5-e19c-4d9d-8793-714edbc7edb5"
+    }
+  },
+  "executor_id": "e7846e99-f2e6-4d23-affe-665568c3c8cb",
+  "state": "success",
+  "updated_at": "2014-10-29T10:36:38.060Z",
+  "id": "14d441c4-f709-4a32-890e-3383e9c13025",
+  "task_id": "e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+  "error": null,
+  "_links": {
+    "cici:root": {
+      "href": "/cider-ci/api/v2",
+      "title": "API-Root"
+    },
+    "cici:task": {
+      "href": "/cider-ci/api/v2/task/e9cf92f9-f224-5b1a-9d1e-d520c120ebd7",
+      "title": "Task"
+    },
+    "cici:trial-attachments": {
+      "href": "/cider-ci/api/v2/trial/14d441c4-f709-4a32-890e-3383e9c13025/trial-attachments",
+      "title": "Trial-Attachments"
+    },
+    "cici:trials": {
+      "href": "/cider-ci/api/v2/task/e9cf92f9-f224-5b1a-9d1e-d520c120ebd7/trials",
+      "title": "Trials"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v2/trial/14d441c4-f709-4a32-890e-3383e9c13025",
+      "title": "Trial"
+    }
+  },
+  "created_at": "2014-10-29T10:34:48.479Z"
+}

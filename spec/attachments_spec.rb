@@ -21,6 +21,7 @@ describe 'CiderClient' do
 
   it 'should list the correct number of trial_attachment_hrefs' do
     @cc.execution_id = 'f7c80b61-1ed5-43ee-a9cd-11a2fc2d5db6'
+    binding.pry
     expect(@cc.trial_attachment_hrefs.count).to eq(6)
   end
 

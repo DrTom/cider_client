@@ -1,6 +1,8 @@
 require 'webmock'
 require 'webmock/rspec'
+require 'json'
 
+ROOT_URL = 'user:pass@cider.example.org'
 BASE_URL = 'user:pass@cider.example.org/cider-ci/api/v1'
 
 def response_file(path)
@@ -54,6 +56,24 @@ def basic_stubs
       # Then mock any trials present for this task
       mock_trials_for_task(task)
     end
+end
+
+
+
+# TODO refactor all these mocks to read their self URL from the JSON
+# file and set themselves up at that location. But what about page?
+
+def self_href_from_file(path)
+  JSON.parse(File.read(path))[0]['_links']['self']['href']
+end
+
+def mock_trial_attachment(path)
+  self_url = "#{ROOT_URL}#{self_href_from_file(path)}"
+  stub_request(:get,
+               self_url).
+   to_return(:body => path,
+            :status => 200,
+            :headers => { 'Content-type' => 'application/json' })
 end
 
 def mock_trial_attachments(trial)

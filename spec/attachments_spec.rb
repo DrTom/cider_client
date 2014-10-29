@@ -8,6 +8,7 @@ describe 'CiderClient' do
 
   before(:each) do
     load_stubs
+    load_attachments
     @cc ||= CiderClient.new
     @cc.username = 'user'
     @cc.password = 'pass'

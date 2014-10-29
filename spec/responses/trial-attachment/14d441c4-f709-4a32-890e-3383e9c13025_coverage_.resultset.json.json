@@ -1,0 +1,31 @@
+{
+  "_links": {
+    "cici:trial-attachments": {
+      "href": "/cider-ci/api/v2/trial/14d441c4-f709-4a32-890e-3383e9c13025/trial-attachments",
+      "title": "Trial-Attachments"
+    },
+    "curies": [
+      {
+        "href": "/cider-ci/api/v2/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "data-stream": {
+      "href": "http://ci1.zhdk.ch:80/cider-ci/storage/trial-attachments/14d441c4-f709-4a32-890e-3383e9c13025/coverage/.resultset.json",
+      "title": "Data-Stream"
+    },
+    "self": {
+      "href": "/cider-ci/api/v2/trial-attachment/14d441c4-f709-4a32-890e-3383e9c13025/coverage/.resultset.json",
+      "title": "Trial-Attachment"
+    }
+  },
+  "content_length": "102628",
+  "content_type": "application/json",
+  "created_at": "2014-10-29T10:36:38.029Z",
+  "id": "fd5b8820-abe9-4895-8106-cf33f101c1f1",
+  "path": "/14d441c4-f709-4a32-890e-3383e9c13025/coverage/.resultset.json",
+  "to_be_retained_before": null,
+  "updated_at": "2014-10-29T10:36:38.029Z"
+}
+

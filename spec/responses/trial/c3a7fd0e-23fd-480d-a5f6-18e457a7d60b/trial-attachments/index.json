@@ -1,0 +1,20 @@
+{
+  "_links": {
+    "cici:trial": {
+      "href": "/cider-ci/api/v1/trial/c3a7fd0e-23fd-480d-a5f6-18e457a7d60b",
+      "title": "Trial"
+    },
+    "cici:trial-attachment": [],
+    "curies": [
+      {
+        "href": "/cider-ci/api/v1/doc/api/index.html#{rel}",
+        "name": "cici",
+        "templated": true
+      }
+    ],
+    "self": {
+      "href": "/cider-ci/api/v1/trial/c3a7fd0e-23fd-480d-a5f6-18e457a7d60b/trial-attachments",
+      "title": "Trial-Attachments"
+    }
+  }
+}

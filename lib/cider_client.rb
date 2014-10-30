@@ -41,17 +41,13 @@ class CiderClient
 
 
   def api_compatible?
-    if @api_version_matches
-      @api_version_matches
-    else
-      begin
-        response = RestClient.get(api_url(''))
-        @api_version_matches = true
-      rescue
-        @api_version_matches = false
-        return false
-      end
+    begin
+      response = RestClient.get(api_url(''))
+      api_version_matches = true
+    rescue RestClient::ResourceNotFound
+      api_version_matches = false
     end
+    api_version_matches
   end
 
   def recurse_tasks(tasks, data)

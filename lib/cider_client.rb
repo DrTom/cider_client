@@ -3,19 +3,10 @@ require 'json'
 require 'fileutils'
 
 # Allows you to query a Cider CI server using Ruby. Wraps the responses
-# in Ruby objects (usually hashes)
+# in Ruby data structures (usually hashes)
 class CiderClient
-  attr_accessor :execution_id, :commit_sha, :host
+  attr_accessor :execution_id, :host
   attr_writer :username, :password
-
-  def mode
-    if @execution_id && !@commit_sha
-      mode = 'execution_id'
-    elsif @commit_sha && !@execution_id
-      mode = 'commit_sha'
-    end
-    mode
-  end
 
   # Returns the base URL including usernames and passwords. Always uses usernames
   # and passwords, because you can't do anything on Cider without basic auth anyhow.
@@ -37,6 +28,20 @@ class CiderClient
   # TODO: Stick these *_url methods into something like url_for(:execution, 'foo')
   def execution_url(path)
     api_url("execution/#{@execution_id}/#{path}")
+  end
+
+  def api_compatible?
+    if @api_version_matches
+      @api_version_matches
+    else
+      begin
+        response = RestClient.get(api_url(''))
+        @api_version_matches = true
+      rescue
+        @api_version_matches = false
+        return false
+      end
+    end
   end
 
   def recurse_tasks(tasks, data)
@@ -72,23 +77,12 @@ class CiderClient
     trials
   end
 
-  def tree_id_from_commit(commit_sha)
-    `git show #{commit_sha} --format=%T | head -1`.chomp
-  end
-
-  def tree_attachment_hrefs(pattern = /.*/)
-    raise 'This is still broken. Don\'t try.'
-    tree_id = tree_id_from_commit(@commit_sha)
-    matching_tas = []
-    tree_attachments = JSON.parse(RestClient.get(api_url("tree-attachments/#{tree_id}")))
-
-    matching_tas << tree_attachment_details['_links']['cici:tree-attachment'].select do |ta|
-      ta if ta['href'].match(pattern)
-    end
-    matching_tas.flatten.map do |ta|
-      ta['href']
-    end
-  end
+  # Misguided idea: We thought we could retrieve all attachments
+  # based on a commit SHA traced to its tree id, but you do need 
+  # an execution ID
+  #def tree_id_from_commit(commit_sha)
+  #  `git show #{commit_sha} --format=%T | head -1`.chomp
+  #end
 
   def trial_attachment_groups
     puts 'Retrieving trial details to find all attachments, this may take a long time.'

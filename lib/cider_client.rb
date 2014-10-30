@@ -13,7 +13,7 @@ class CiderClient
     @username = options.fetch(:username)
     @password = options.fetch(:password)
     unless api_compatible?
-      raise "The server at #{@host} does not provide the correct API version (v2)."
+      raise "The server at #{@host} does not provide the correct API version. v2 is required."
     end
   end
 

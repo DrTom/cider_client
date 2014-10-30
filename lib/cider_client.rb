@@ -12,9 +12,8 @@ class CiderClient
     @host = options.fetch(:host)
     @username = options.fetch(:username)
     @password = options.fetch(:password)
-    unless api_compatible?
-      raise "The server at #{@host} does not provide the correct API version. v2 is required."
-    end
+    fail "The server at #{@host} does not provide the\
+      correct API version. v2 is required." unless api_compatible?
   end
 
   # Returns the base URL including usernames and passwords. Always uses usernames
@@ -43,7 +42,7 @@ class CiderClient
     begin
       # Try to get the API root URL. If it 404s out, this server probably
       # doesn't offer that API version.
-      response = RestClient.get(api_url)
+      RestClient.get(api_url)
       api_version_matches = true
     rescue RestClient::ResourceNotFound
       api_version_matches = false
@@ -69,6 +68,7 @@ class CiderClient
                   JSON.parse(RestClient.get(execution_url('tasks'))))
   end
 
+  # rubocop:disable Metrics/MethodLength
   def trials
     trials = []
     tasks.each do |task|

@@ -29,7 +29,7 @@ class CiderClient
     "#{base_url}#{path}"
   end
 
-  def api_url(path)
+  def api_url(path = '')
     url("/cider-ci/api/v2/#{path}")
   end
 
@@ -43,7 +43,7 @@ class CiderClient
     begin
       # Try to get the API root URL. If it 404s out, this server probably
       # doesn't offer that API version.
-      response = RestClient.get(api_url(''))
+      response = RestClient.get(api_url)
       api_version_matches = true
     rescue RestClient::ResourceNotFound
       api_version_matches = false

@@ -12,9 +12,13 @@ describe 'CiderClient' do
   end
 
   it 'should refuse to work with the wrong API version on the server' do
-    mock_api_version('v1', 404)
-    mock_api_version('v2', 200)
-
+    mock_api_version('v1', 200, { :username => 'user', :password => 'pass'} )
+    mock_api_version('v2', 404, { :username => 'user', :password => 'pass'})
+    expect {
+      cc = CiderClient.new(:host => 'cider.example.org',
+                           :username => 'user',
+                           :password => 'pass')
+    }.to raise_error
   end
 
 end

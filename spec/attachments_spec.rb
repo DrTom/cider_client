@@ -1,6 +1,7 @@
 require 'rspec'
 require 'pry'
 require 'webmock_smartloader'
+require 'webmock_api_version'
 
 require 'cider_client'
 
@@ -9,10 +10,9 @@ describe 'CiderClient' do
   before(:each) do
     load_stubs
     load_attachments
-    @cc ||= CiderClient.new
-    @cc.username = 'user'
-    @cc.password = 'pass'
-    @cc.host = 'cider.example.org'
+    mock_api_version("v1", 404)
+    mock_api_version("v2", 200)
+    @cc ||= CiderClient.new(:host => 'cider.example.org', :username => 'user', :password => 'pass')
     @cc.execution_id = '2e9f69c5-e19c-4d9d-8793-714edbc7edb5'
   end
 

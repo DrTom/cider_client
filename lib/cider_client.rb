@@ -8,6 +8,15 @@ class CiderClient
   attr_accessor :execution_id, :host
   attr_writer :username, :password
 
+  def initialize(options = {})
+    @host = options.fetch(:host)
+    @username = options.fetch(:username)
+    @password = options.fetch(:password)
+    unless api_compatible?
+      raise "The server at #{@host} does not provide the correct API version (v2)."
+    end
+  end
+
   # Returns the base URL including usernames and passwords. Always uses usernames
   # and passwords, because you can't do anything on Cider without basic auth anyhow.
   # I used in all further url_* methods.
@@ -29,6 +38,7 @@ class CiderClient
   def execution_url(path)
     api_url("execution/#{@execution_id}/#{path}")
   end
+
 
   def api_compatible?
     if @api_version_matches

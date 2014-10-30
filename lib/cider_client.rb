@@ -19,7 +19,7 @@ class CiderClient
 
   # Returns the base URL including usernames and passwords. Always uses usernames
   # and passwords, because you can't do anything on Cider without basic auth anyhow.
-  # I used in all further url_* methods.
+  # Is used in all further url_* methods.
   def base_url
     "http://#{@username}:#{@password}@#{@host}"
   end
@@ -39,9 +39,10 @@ class CiderClient
     api_url("execution/#{@execution_id}/#{path}")
   end
 
-
   def api_compatible?
     begin
+      # Try to get the API root URL. If it 404s out, this server probably
+      # doesn't offer that API version.
       response = RestClient.get(api_url(''))
       api_version_matches = true
     rescue RestClient::ResourceNotFound

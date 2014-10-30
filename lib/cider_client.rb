@@ -68,6 +68,7 @@ class CiderClient
                   JSON.parse(RestClient.get(execution_url('tasks'))))
   end
 
+  # I've got a long thing, what can I say...
   # rubocop:disable Metrics/MethodLength
   def trials
     trials = []
@@ -85,11 +86,11 @@ class CiderClient
   end
 
   # Misguided idea: We thought we could retrieve all attachments
-  # based on a commit SHA traced to its tree id, but you do need 
+  # based on a commit SHA traced to its tree id, but you do need
   # an execution ID
-  #def tree_id_from_commit(commit_sha)
-  #  `git show #{commit_sha} --format=%T | head -1`.chomp
-  #end
+  # def tree_id_from_commit(commit_sha)
+  #   `git show #{commit_sha} --format=%T | head -1`.chomp
+  # end
 
   def trial_attachment_groups
     puts 'Retrieving trial details to find all attachments, this may take a long time.'

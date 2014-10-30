@@ -1,6 +1,7 @@
 # cider\_client -- Ruby client for Cider CI
 
 [![Build Status](https://travis-ci.org/psy-q/cider_client.svg?branch=master)](https://travis-ci.org/psy-q/cider_client)
+[![Coverage Status](https://img.shields.io/coveralls/psy-q/cider_client.svg)](https://coveralls.io/r/psy-q/cider_client?branch=master)
 
 This is an attempt at a Ruby client/wrapper for the Cider CI API, which is REST/JSON/HAL-based.
 

@@ -21,10 +21,9 @@ Hell, how would I know? Maybe try something like this:
 require 'rubygems'
 require 'cider_client'
 
-cc = CiderClient.new
-cc.host = 'your.cider.example.com'
-cc.username = 'someone'
-cc.password = 'nothing_special'
+cc = CiderClient.new(:host => 'your.cider.example.com',
+                     :username => 'someone',
+                     :password => 'nothing_special')
 cc.execution_id = '61a04030-96d7-4322-9c65-fb24660ad8ea'
 
 # Now you can retrieve the trials for that execution

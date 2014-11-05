@@ -122,10 +122,12 @@ class CiderClient
   def attachment_data(href)
     attachment_details = JSON.parse(RestClient.get(url(href)))
     stream_url = attachment_details['_links']['data-stream']['href']
-
-    # Stupid fix because the CI hosts seem to return their own IP instead of hostname
-    # in these responses
-    stream_url.gsub!('https://195.176.254.43', base_url)
-    RestClient.get(stream_url)
+    RestClient::Request.new(
+      method: :get,
+      url: stream_url,
+      user: @username,
+      password:  @password
+    ).execute
   end
+
 end

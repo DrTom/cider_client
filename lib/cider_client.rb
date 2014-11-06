@@ -12,24 +12,19 @@ class CiderClient
     @host = options.fetch(:host)
     @username = options.fetch(:username)
     @password = options.fetch(:password)
+
+    @base_url = if @host =~ /^https?:\/\//
+                  @host
+                else
+                  "http://" + @host
+                end
+
     fail "The server at #{@host} does not provide the\
       correct API version. v2 is required." unless api_compatible?
   end
 
-  # Returns the base URL including usernames and passwords. Always uses usernames
-  # and passwords, because you can't do anything on Cider without basic auth anyhow.
-  # Is used in all further url_* methods.
-  def base_url
-    "http://#{@username}:#{@password}@#{@host}"
-  end
-
-  # URL starting from the base URL root, with the passed path appended
-  def url(path)
-    "#{base_url}#{path}"
-  end
-
   def api_url(path = '')
-    url("/cider-ci/api/v2/#{path}")
+    "/cider-ci/api/v2/#{path}"
   end
 
   # URL starting from the execution, with the passed path appended
@@ -42,7 +37,7 @@ class CiderClient
     begin
       # Try to get the API root URL. If it 404s out, this server probably
       # doesn't offer that API version.
-      RestClient.get(api_url)
+      get(api_url)
       api_version_matches = true
     rescue RestClient::ResourceNotFound
       api_version_matches = false
@@ -56,7 +51,7 @@ class CiderClient
     end
     if data['_links']['next']
       puts "Retrieved #{tasks.count} tasks total so far."
-      data = JSON.parse(RestClient.get(url(data['_links']['next']['href'])))
+      data = JSON.parse(get(data['_links']['next']['href']))
       tasks = recurse_tasks(tasks, data)
     end
     tasks
@@ -65,7 +60,7 @@ class CiderClient
   def tasks
     tasks = []
     recurse_tasks(tasks,
-                  JSON.parse(RestClient.get(execution_url('tasks'))))
+                  JSON.parse(get(execution_url('tasks'))))
   end
 
   # I've got a long thing, what can I say...
@@ -73,11 +68,11 @@ class CiderClient
   def trials
     trials = []
     tasks.each do |task|
-      task_url = url(task['href'])
-      details = JSON.parse(RestClient.get(task_url))
-      trials_url = url(details['_links']['cici:trials']['href'])
+      task_url = task['href']
+      details = JSON.parse(get(task_url))
+      trials_url = details['_links']['cici:trials']['href']
       puts "Need to retrieve all trials for #{details['_links']['cici:trials']['href']}"
-      single_trial = JSON.parse(RestClient.get(trials_url))
+      single_trial = JSON.parse(get(trials_url))
       single_trial['_links']['cici:trial'].each do |st|
         trials << st
       end
@@ -96,9 +91,9 @@ class CiderClient
     puts 'Retrieving trial details to find all attachments, this may take a long time.'
     trial_attachment_groups = []
     trials.each do |trial|
-      trial_url = url(trial['href'])
+      trial_url = trial['href']
       puts "Retrieving trial details for #{trial_url}."
-      single_trial = JSON.parse(RestClient.get(trial_url))
+      single_trial = JSON.parse(get(trial_url))
       trial_attachment_groups << \
         single_trial['_links']['cici:trial-attachments']
     end
@@ -110,8 +105,8 @@ class CiderClient
   def trial_attachment_hrefs(pattern = /.*/)
     matching_tas = []
     trial_attachment_groups.each do |tag|
-      trial_attachment_url = url(tag['href'])
-      trial_attachment_details = JSON.parse(RestClient.get(trial_attachment_url))
+      trial_attachment_url = tag['href']
+      trial_attachment_details = JSON.parse(get(trial_attachment_url))
       matching_tas << trial_attachment_details['_links']['cici:trial-attachment'].select do |ta|
         ta if ta['href'].match(pattern)
       end
@@ -120,11 +115,22 @@ class CiderClient
   end
 
   def attachment_data(href)
-    attachment_details = JSON.parse(RestClient.get(url(href)))
+    attachment_details = JSON.parse(get(href))
     stream_url = attachment_details['_links']['data-stream']['href']
+    get(stream_url)
+  end
+
+
+  def get(url)
+    full_url = if url =~ /^https?:\/\//
+                 url
+               else
+                 @base_url + url
+               end
+
     RestClient::Request.new(
       method: :get,
-      url: stream_url,
+      url: full_url,
       user: @username,
       password:  @password
     ).execute

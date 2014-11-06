@@ -54,7 +54,7 @@ def load_attachments
           ]
 
   files.each do |file|
-    url = "http://ci1.zhdk.ch:80/cider-ci/#{file[:url]}"
+    url = "http://user:pass@ci1.zhdk.ch/cider-ci/#{file[:url]}"
     path = File.join(File.expand_path('data', File.dirname(__FILE__)), file[:path])
     stub_request(:get, url)
       .to_return(:body => File.read(path),
